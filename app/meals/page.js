@@ -4,6 +4,11 @@ import style from "./page.module.css";
 import MealsGrid from "@/components/meals/meals-grid";
 import { getMeals } from "@/lib/meals"; // getMeals will contain the data from backend
 
+export const metadata = {
+  title: "All Meals",
+  description: "Browse the delicious meals shared by our community",
+};
+
 async function Meals() {
   const meals = await getMeals();
 
