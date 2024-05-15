@@ -37,12 +37,12 @@ export default function MealDetailsPage({ params }) {
         </div>
       </header>
       <main>
-        <p
+        {/* <p
           className={styles.instructions}
           dangerouslySetInnerHTML={{
             __html: meal.instructions,
           }}
-        ></p>
+        ></p> */}
       </main>
     </>
   );
