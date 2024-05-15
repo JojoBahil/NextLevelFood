@@ -9,15 +9,16 @@ export async function generateMetadata({ params }) {
   if (!meal) {
     notFound();
   }
+
   return { title: meal.title, description: meal.summary };
 }
 
 export default function MealDetailsPage({ params }) {
   const meal = getMeal(params.mealSlug);
 
-  // if (!meal) {
-  //   notFound();
-  // }
+  if (!meal) {
+    notFound();
+  }
 
   meal.instructions = meal.instructions.replace(/\n/g, "<br />");
 
